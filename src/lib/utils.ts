@@ -7,6 +7,15 @@ export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs))
 }
 
+const normalizeUrl = (url?: string) => {
+  if (!url) return "#";
+  if (url.startsWith("http://") || url.startsWith("https://")) {
+    return url;
+  }
+  return `https://${url}`;
+};
+
+
 export const mapper = (users: unknown): UserType[] => {
   if (!Array.isArray(users)) {
     throw new Error("Invalid API response");
@@ -18,7 +27,7 @@ export const mapper = (users: unknown): UserType[] => {
       name: user.name,
       email: user.email,
       phone: user.phone,
-      website: user.website,
+      website: normalizeUrl(user.website),
       address: user.address,
       company: user.company,
     }))
