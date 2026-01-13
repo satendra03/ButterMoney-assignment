@@ -44,10 +44,10 @@ const User = ({ user }: { user: UserType }) => {
               <div className="leading-relaxed text-foreground">
                 {user.address ? (
                   <>
-                    <p>{user.address.street}</p>
-                    <p>{user.address.suite}</p>
+                    <p>{user.address?.street}</p>
+                    <p>{user.address?.suite}</p>
                     <p>
-                      {user.address.city}, {user.address.zipcode}
+                      {user.address?.city}, {user.address?.zipcode}
                     </p>
                     <p className="text-muted-foreground">
                       Coordinates: {user?.address?.geo?.lat}, {user?.address?.geo?.lng}
@@ -65,15 +65,15 @@ const User = ({ user }: { user: UserType }) => {
                 Company
               </div>
               <div className="space-y-1">
-                <p className="font-medium">{user.company?.name || "—"}</p>
-                {user.company?.catchPhrase && (
+                <p className="font-medium">{user?.company?.name || "—"}</p>
+                {user?.company?.catchPhrase && (
                   <p className="italic text-muted-foreground">
-                    “{user.company.catchPhrase}”
+                    “{user?.company?.catchPhrase}”
                   </p>
                 )}
-                {user.company?.bs && (
+                {user?.company?.bs && (
                   <p className="text-xs text-muted-foreground">
-                    {user.company.bs}
+                    {user?.company?.bs}
                   </p>
                 )}
               </div>
@@ -85,6 +85,7 @@ const User = ({ user }: { user: UserType }) => {
           </AlertDialogFooter>
         </AlertDialogContent>
       </AlertDialog>
+
       <div className="user border-b flex items-center justify-between py-3">
         <div className="main-info flex items-center">
           <div className="user-icon h-10 w-10 flex items-center">

@@ -50,7 +50,7 @@ The objective of this assignment was to build a User Management System that demo
 
    ```bash
    git clone https://github.com/satendra03/ButterMoney-assignment.git
-   cd ButtorMoney
+   cd ButterMoney-assignment
    ```
 
 2. **Install dependencies:**

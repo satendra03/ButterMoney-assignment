@@ -41,9 +41,9 @@ export const useUserStore = create<UserStoreType>((set) => ({
         }
     },
     addLocalUser: (user: UserType) => {
-        const updated = [...getLocalUsers(), user];
-        set({ localUsers: updated });
-        setLocalUsers(updated);
+        const updatedLocalUsers = [...getLocalUsers(), user];
+        set({ localUsers: updatedLocalUsers });
+        setLocalUsers(updatedLocalUsers);
     },
     searchUsers: (query: string) => {
         set({ searchQuery: query });

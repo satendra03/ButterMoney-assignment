@@ -107,7 +107,7 @@ const AddMemberForm = ({ onSubmit }: { onSubmit: () => void }) => {
 
           {/* Address */}
           <div className="space-y-3">
-            <p className="text-sm font-medium">Address</p>
+            <p className="text-sm text-muted-foreground">Address</p>
 
             <Input name="street" placeholder="Street" />
             <Input name="suite" placeholder="Suite / Apartment" />
@@ -119,7 +119,7 @@ const AddMemberForm = ({ onSubmit }: { onSubmit: () => void }) => {
 
           {/* Company */}
           <div className="space-y-3">
-            <p className="text-sm font-medium">Company</p>
+            <p className="text-sm text-muted-foreground">Company</p>
             <Input name="companyName" placeholder="Company name" />
             <Input name="catchPhrase" placeholder="Catch phrase" />
             <Input name="bs" placeholder="Business slogan" />

@@ -4,7 +4,7 @@ import { Input } from "./ui/input";
 import User from "./user";
 import type { UserType } from "@/types";
 import { useUserStore } from "@/store/store";
-import { filteredUsersByNameOrEmail } from "@/lib/utils";
+import { filteredUsersByNameOrEmail } from "@/data/users";
 import { useEffect } from "react";
 import {
   AlertDialog,

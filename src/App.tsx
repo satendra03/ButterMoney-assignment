@@ -1,4 +1,4 @@
-import UserList from "./components/use-list";
+import UserList from "./components/user-list";
 
 const App = () => {
   return <UserList />
